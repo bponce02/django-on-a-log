@@ -54,8 +54,12 @@ source = { virtual = "." }
 dependencies = [
     { name = "django" },
     { name = "django-htmx" },
-    { name = "django-pytest" },
     { name = "django-q2" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "django-pytest" },
     { name = "playwright" },
     { name = "pytest" },
 ]
@@ -64,11 +68,12 @@ dependencies = [
 requires-dist = [
     { name = "django", specifier = ">=6.0.5" },
     { name = "django-htmx", specifier = ">=1.27.0" },
-    { name = "django-pytest", specifier = ">=0.2.0" },
+    { name = "django-pytest", marker = "extra == 'dev'", specifier = ">=0.2.0" },
     { name = "django-q2", specifier = ">=1.10.0" },
-    { name = "playwright", specifier = ">=1.59.0" },
-    { name = "pytest", specifier = ">=9.0.3" },
+    { name = "playwright", marker = "extra == 'dev'", specifier = ">=1.59.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.3" },
 ]
+provides-extras = ["dev"]
 
 [[package]]
 name = "django-picklefield"

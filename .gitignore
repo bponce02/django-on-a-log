@@ -1,1 +1,6 @@
 .python-version
+example/example/__pycache__/__init__.cpython-312.pyc
+example/example/__pycache__/settings.cpython-312.pyc
+example/example/__pycache__/views.cpython-312.pyc
+example/example/__pycache__/urls.cpython-312.pyc
+example/example/__pycache__/wsgi.cpython-312.pyc
